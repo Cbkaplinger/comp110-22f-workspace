@@ -3,7 +3,6 @@
 __author__ = "730570002"
 
 import random
-from xml.dom.pulldom import SAX2DOM
 
 points: int = 0
 player: str = ""
