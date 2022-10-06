@@ -3,10 +3,13 @@
 __author__ = "730570002"
 
 import random
+from xml.dom.pulldom import SAX2DOM
 
 points: int = 0
 player: str = ""
 game: bool = True
+smiley_face: str = "\U00000000"
+sad_face: str = "\U00000000"
 
 
 def main() -> None:
@@ -80,6 +83,8 @@ def UNC_basketball_game() -> None:
     """A fun UNC basketball trivia game."""
     global points
     global game
+    global sad_face
+    global smiley_face
 
     print(f"Hello {player}, welcome to the UNC Basketball trivia game where you can test if you're a real Tar Heel fan")
 
@@ -87,50 +92,50 @@ def UNC_basketball_game() -> None:
         Q1 = input("\nHow many NCAA championships does UNC Basketball have? ")
         Q1_answer = "6"
         if Q1 == Q1_answer:
-            print("Correct")
+            print(f"Correct {smiley_face}")
             points += 1
         else:
-            print(f"Incorrect, UNC has {Q1_answer} NCAA championships")
+            print(f"Incorrect, UNC has {Q1_answer} NCAA championships {sad_face}")
             points -= 1
         print(f"You have {points} points")
         
         Q2 = input("\nWhat conference do the Tar Heels play in? ")
         Q2_answer = "ACC"
         if Q2 == Q2_answer:
-            print("Correct")
+            print(f"Correct {smiley_face}")
             points += 1
         else:
-            print(f"Incorrect, they play in the {Q2_answer}")
+            print(f"Incorrect, they play in the {Q2_answer} {sad_face}")
             points -= 1
         print(f"You have {points} points")
 
         Q3 = input("\nWho is the all time leading scorer of UNC Basketball? ")
         Q3_answer = "Tyler Hansbrough"
         if Q3 == Q3_answer:
-            print("Correct")
+            print(f"Correct {smiley_face}")
             points += 1
         else:
-            print(f"Incorrect, it's {Q3_answer}")
+            print(f"Incorrect, it's {Q3_answer} {sad_face}")
             points -= 1
         print(f"You have {points} points")
 
         Q4 = input("\nWho did UNC beat in the 2022 final four? (Hint it's our biggest rival) ")
         Q4_answer = "Duke"
         if Q4 == Q4_answer:
-            print("Correct")
+            print(f"Correct {smiley_face}")
             points += 1
         else:
-            print(f"Incorrect, it's {Q4_answer}")
+            print(f"Incorrect, it's {Q4_answer} {sad_face}")
             points -= 1
         print(f"You have {points} points")
 
         Q5 = input("\nWhat is the name of the stadium the Tar Heels play in? ")
         Q5_answer = "Dean Dome"
         if Q5 == Q5_answer:
-            print("Correct")
+            print(f"Correct {smiley_face}")
             points += 1
         else:
-            print(f"Incorrect, it's the {Q5_answer}")
+            print(f"Incorrect, it's the {Q5_answer} {sad_face}")
             points -= 1
         print(f"You have {points} points")
        
@@ -140,7 +145,7 @@ def UNC_basketball_game() -> None:
         if play_again == "No":
             game = False
             print(f"You ended up with {points} points")
- 
-                
+
+
 if __name__ == "__main__":
     main()
