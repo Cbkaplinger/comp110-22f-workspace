@@ -3,7 +3,6 @@
 # Declaring the type of a dictionary
 from ast import Break
 
-
 schools: dict[str, int]
 
 # Initialize to an empty dictionary
