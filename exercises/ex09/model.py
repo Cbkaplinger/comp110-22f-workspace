@@ -121,7 +121,6 @@ class Model:
         """Initialize the cells with random locations and directions."""
         self.population = []
         index: int = 0
-        index: int = 0
         index1: int = 0
 
         for _ in range(cells):
